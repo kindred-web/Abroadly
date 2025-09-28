@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Abroadly — Connect. Explore. Remember.</title>
+  <meta name="description" content="Abroadly — the social app for study abroad students. Connect with fellow students in your city, plan bucket lists, and save memories." />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="site">
+    <header class="site-header">
+      <div class="container header-inner">
+        <div class="logo">
+          <svg class="logo-mark" viewBox="0 0 24 24" width="36" height="36" aria-hidden="true"><rect width="24" height="24" rx="6" fill="#FF6B61"></rect><path d="M7 12c0-2.76 2.24-5 5-5v10c-2.76 0-5-2.24-5-5z" fill="#fff"/></svg>
+          <div class="brand">
+            <div class="brand-title">Abroadly</div>
+            <div class="brand-sub">Connect. Explore. Remember.</div>
+          </div>
+        </div>
+
+        <nav class="nav">
+          <a href="#home">Home</a>
+          <a href="#features">Features</a>
+          <a href="#feed">Feed</a>
+          <a href="#about">About</a>
+          <button id="waitlistBtn" class="btn btn-primary">Join Waitlist</button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO -->
+      <section id="home" class="hero container">
+        <div class="hero-left">
+          <h1>Meet, Share, and Explore — your study abroad community</h1>
+          <p class="lead">Connect with fellow students, swap tips, and start building your abroad experience before you even land.</p>
+          <div class="hero-cta">
+            <button id="joinNow" class="btn btn-primary">Sign Up Free</button>
+            <a href="#features" class="btn btn-ghost">See What’s Possible</a>
+          </div>
+
+          <div class="why-quick">
+            <div class="why-card"><strong>Connect before you go</strong><p>Meet students in your city/semester early so you arrive with friends.</p></div>
+            <div class="why-card"><strong>Plan together</strong><p>Share bucket lists and find peers who want the same trips.</p></div>
+            <div class="why-card"><strong>Student-first reviews</strong><p>Find the spots students actually recommend.</p></div>
+          </div>
+        </div>
+
+        <div class="hero-right">
+          <div class="mock-phone">
+            <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop&s=9b1c2b8a5892f1f0a4a2c9b9a0292f1a"
+                 alt="students" />
+            <div class="mock-caption"><strong>Barcelona • Fall 2025</strong><span>Who wants to do a rooftop tapas crawl this weekend?</span></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEATURES -->
+      <section id="features" class="container features-section">
+        <h2>What you'll use most</h2>
+        <div class="features-grid">
+          <div class="feature">
+            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=600&auto=format&fit=crop" alt="profile">
+            <h3>Profiles</h3>
+            <p>Rich profiles: program, city/semester, bucket list, interests — fill what you want.</p>
+          </div>
+          <div class="feature">
+            <img src="https://images.unsplash.com/photo-1523381211519-2b2f6e5b7b50?q=80&w=600&auto=format&fit=crop" alt="feed">
+            <h3>City Feeds</h3>
+            <p>Local feeds for your city + semester — fast, casual posts and conversations.</p>
+          </div>
+          <div class="feature">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=600&auto=format&fit=crop" alt="bucketlist">
+            <h3>Bucket Lists</h3>
+            <p>Share your must-do list and find others with the same plans.</p>
+          </div>
+          <div class="feature">
+            <img src="https://images.unsplash.com/photo-1454496522488-7a8e488e8606?q=80&w=600&auto=format&fit=crop" alt="reviews">
+            <h3>Student Reviews</h3>
+            <p>Rate restaurants, spots, and experiences — student-first recommendations only.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- FEED PREVIEW -->
+      <section id="feed" class="container feed-section">
+        <div class="feed-left">
+          <div class="feed-controls">
+            <label>Demo City:</label>
+            <select id="cityFilter">
+              <option value="All">All</option>
+              <option value="Barcelona">Barcelona</option>
+              <option value="Florence">Florence</option>
+              <option value="London">London</option>
+            </select>
+
+            <label>Tag filter:</label>
+            <input id="tagFilter" placeholder="e.g. Pickleball, Food" />
+            <button id="applyFilters" class="btn">Apply</button>
+          </div>
+
+          <div class="post-compose card">
+            <textarea id="postText" placeholder="Share a quick update — where are you heading this weekend?"></textarea>
+            <div class="compose-row">
+              <input id="postTags" placeholder="Tags (comma separated)"/>
+              <select id="postCity"><option>Barcelona</option><option>Florence</option><option>London</option></select>
+              <button id="postBtn" class="btn btn-primary">Post</button>
+            </div>
+          </div>
+
+          <div id="feedList" class="feed-list">
+            <!-- Posts injected by JS -->
+          </div>
+        </div>
+
+        <aside class="feed-right">
+          <div class="card quick-bucket">
+            <h4>Your Bucket List (demo)</h4>
+            <ul id="demoBucket">
+              <li>Cinque Terre day trip</li>
+              <li>Pickleball meetup</li>
+              <li>Tapas crawl</li>
+            </ul>
+            <button id="addBucket" class="btn">Add item</button>
+          </div>
+
+          <div class="card weekly-prompt">
+            <h4>This week's prompt</h4>
+            <p><strong>First Impressions:</strong> Share one surprising thing from your first week abroad.</p>
+            <button id="promptPost" class="btn">Post now</button>
+          </div>
+
+          <div class="card reviews-card">
+            <h4>Student Reviews (demo)</h4>
+            <div class="review">
+              <strong>La Pepita — Barcelona</strong>
+              <div class="rating">⭐⭐⭐⭐☆</div>
+              <p>Great tapas, student-friendly prices.</p>
+            </div>
+            <div class="review">
+              <strong>Central Hostel — Florence</strong>
+              <div class="rating">⭐⭐⭐☆☆</div>
+              <p>Good location, noisy at night.</p>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- ABOUT / WAITLIST -->
+      <section id="about" class="container about-section">
+        <div class="about-left">
+          <h3>How it works</h3>
+          <ol>
+            <li><strong>Connect</strong> — Create a profile, add your program & city, and preview your semester cohort.</li>
+            <li><strong>Explore</strong> — Post quick updates, find people who share your bucket list, and plan trips together.</li>
+            <li><strong>Remember</strong> — Save your best moments and export a scrapbook later.</li>
+          </ol>
+        </div>
+
+        <div class="about-right card">
+          <h4>Be first to try Abroadly</h4>
+          <p>Sign up with your university email to join the early access list for our demo city.</p>
+          <!-- Replace action with your Formspree URL or other form endpoint -->
+          <form id="waitlistForm" action="https://formspree.io/f/your-form-id" method="POST">
+            <input name="name" placeholder="Full name" required />
+            <input type="email" name="email" placeholder="your@university.edu" required />
+            <select name="city"><option>Barcelona</option><option>Florence</option><option>London</option></select>
+            <label class="consent"><input type="checkbox" name="consent" required/> I agree to receive updates</label>
+            <button type="submit" class="btn btn-primary">Join Waitlist</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div>© 2025 Abroadly — Connect. Explore. Remember.</div>
+        <div class="socials">Instagram · TikTok · Privacy</div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
