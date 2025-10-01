@@ -1,223 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Abroadly</title>
-  <link rel="stylesheet" href="assets/css/style.css" />
   <style>
-    body {
+    /* General Reset */
+    * {
       margin: 0;
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      background-color: #fafafa;
-      color: #333;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f8f9fa;
+      color: #222;
     }
 
     header {
-      background: white;
-      border-bottom: 1px solid #eee;
-      padding: 1rem 2rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 10;
+      background: linear-gradient(135deg, #3b82f6, #06b6d4);
+      color: white;
+      padding: 2rem;
+      text-align: center;
     }
 
     header h1 {
-      font-size: 1.5rem;
-      color: #4CAF93;
-      margin: 0;
+      font-size: 2.5rem;
     }
 
-    header nav a {
-      margin-left: 1.5rem;
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
+    header p {
+      margin-top: 0.5rem;
+      font-size: 1.2rem;
     }
 
+    /* Section Styling */
     section {
       padding: 4rem 2rem;
-      max-width: 1100px;
+      max-width: 1000px;
       margin: auto;
     }
 
-    .hero {
+    section h2 {
       text-align: center;
-      padding: 6rem 2rem;
-      background: url('https://via.placeholder.com/1600x600') center/cover no-repeat;
-      color: white;
-      border-radius: 12px;
-    }
-
-    .hero h2 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    .hero p {
-      font-size: 1.25rem;
+      font-size: 2rem;
       margin-bottom: 2rem;
     }
 
-    .hero button {
-      background: #4CAF93;
-      color: white;
-      border: none;
-      padding: 0.75rem 2rem;
-      font-size: 1rem;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    .features {
+    /* Why Abroadly - 2x2 grid */
+    .features-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(2, 1fr);
       gap: 2rem;
-      margin-top: 2rem;
     }
 
-    .feature-card {
+    .feature {
       background: white;
-      border-radius: 12px;
       padding: 2rem;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       text-align: center;
     }
 
-    .feature-card img {
-      max-width: 80px;
+    .feature h3 {
+      margin-bottom: 0.5rem;
+      color: #3b82f6;
+    }
+
+    /* Example Images */
+    .examples {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .examples img {
+      width: 100%;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    /* Waitlist Form */
+    .waitlist {
+      background: white;
+      padding: 3rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    .waitlist input[type="email"] {
+      padding: 0.8rem;
+      width: 70%;
+      border-radius: 8px;
+      border: 1px solid #ccc;
       margin-bottom: 1rem;
     }
 
-    form {
-      max-width: 500px;
-      margin: 3rem auto 0;
-      background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-    }
-
-    form h3 {
-      margin-top: 0;
-      text-align: center;
-    }
-
-    input, button {
-      width: 100%;
-      padding: 0.75rem;
-      margin-top: 1rem;
-      border-radius: 6px;
-      border: 1px solid #ccc;
+    .waitlist button {
+      padding: 0.8rem 1.5rem;
+      background: #3b82f6;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
       font-size: 1rem;
     }
 
-    button[type="submit"] {
-      background: #4CAF93;
-      color: white;
-      border: none;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.2s ease;
-    }
-
-    button[type="submit"]:hover {
-      background: #3b9478;
-    }
-
-    #form-message {
-      margin-top: 1rem;
-      text-align: center;
-      font-weight: 500;
+    .waitlist button:hover {
+      background: #2563eb;
     }
 
     footer {
-      background: #333;
-      color: white;
       text-align: center;
       padding: 2rem;
-      margin-top: 3rem;
+      background: #222;
+      color: white;
     }
   </style>
 </head>
 <body>
 
+  <!-- Hero -->
   <header>
     <h1>Abroadly</h1>
-    <nav>
-      <a href="#features">Features</a>
-      <a href="#waitlist">Join Waitlist</a>
-    </nav>
+    <p>Connect · Explore · Remember</p>
   </header>
 
-  <section class="hero">
-    <h2>Connect. Explore. Remember.</h2>
-    <p>The community built just for study abroad students.</p>
-    <button onclick="document.getElementById('waitlist').scrollIntoView({behavior:'smooth'})">Join the Waitlist</button>
-  </section>
-
-  <section id="features">
-    <h2 style="text-align:center;">Why Abroadly?</h2>
-    <div class="features">
-      <div class="feature-card">
-        <img src="https://via.placeholder.com/80" alt="Profiles">
-        <h3>Detailed Profiles</h3>
-        <p>Show your city, program, home university, and bucket list to connect with like-minded travelers.</p>
+  <!-- Why Abroadly -->
+  <section>
+    <h2>Why Abroadly?</h2>
+    <div class="features-grid">
+      <div class="feature">
+        <h3>Connect</h3>
+        <p>Meet fellow students in your city and program before you even arrive.</p>
       </div>
-      <div class="feature-card">
-        <img src="https://via.placeholder.com/80" alt="Feed">
-        <h3>Engaging Feeds</h3>
-        <p>Share your journey through photos, videos, polls, and text with people abroad right now.</p>
+      <div class="feature">
+        <h3>Explore</h3>
+        <p>Find peers with similar interests and discover bucket-list experiences together.</p>
       </div>
-      <div class="feature-card">
-        <img src="https://via.placeholder.com/80" alt="Bucket List">
-        <h3>Bucket List Matching</h3>
-        <p>Find others who want to do the same things as you, making it easy to plan and explore together.</p>
+      <div class="feature">
+        <h3>Share</h3>
+        <p>Post photos, videos, and tips in city-specific feeds that stay active all semester.</p>
       </div>
-      <div class="feature-card">
-        <img src="https://via.placeholder.com/80" alt="Reviews">
-        <h3>Local Ratings</h3>
-        <p>Leave reviews for restaurants, trips, and hidden gems—just for study abroad students.</p>
+      <div class="feature">
+        <h3>Remember</h3>
+        <p>Save your adventures in a digital scrapbook you’ll always look back on.</p>
       </div>
     </div>
   </section>
 
-  <section id="waitlist">
-    <form id="waitlist-form">
-      <h3>Join the Waitlist</h3>
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your Email" required />
-      <button type="submit">Join</button>
-      <p id="form-message"></p>
-    </form>
+  <!-- Example Images -->
+  <section>
+    <h2>See Abroadly in Action</h2>
+    <div class="examples">
+      <img src="https://via.placeholder.com/400x250.png?text=City+Feed+Demo" alt="City Feed Demo">
+      <img src="https://via.placeholder.com/400x250.png?text=Bucket+List+Demo" alt="Bucket List Demo">
+      <img src="https://via.placeholder.com/400x250.png?text=Profile+Demo" alt="Profile Demo">
+    </div>
+  </section>
+
+  <!-- Waitlist -->
+  <section>
+    <div class="waitlist">
+      <h2>Join the Waitlist</h2>
+      <form action="YOUR_GOOGLE_SCRIPT_URL_HERE" method="POST">
+        <input type="email" name="email" placeholder="Enter your email" required>
+        <br>
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
   </section>
 
   <footer>
-    <p>© 2025 Abroadly — Built for students, by students</p>
+    <p>&copy; 2025 Abroadly. All rights reserved.</p>
   </footer>
 
-  <script>
-    const scriptURL = "https://script.google.com/macros/s/AKfycbyUSpQqbXD7OJZKudZuwWuYGrtxjOE8EyYiLQfmCXU0xkvGjX9QIRWM88CvBl4qohIN/exec";
-    const form = document.getElementById('waitlist-form');
-    const msg = document.getElementById('form-message');
-
-    form.addEventListener('submit', e => {
-      e.preventDefault();
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-          msg.textContent = "✅ Thanks for joining! Check your inbox soon.";
-          msg.style.color = "green";
-          form.reset();
-        })
-        .catch(error => {
-          msg.textContent = "❌ Oops! Something went wrong. Try again later.";
-          msg.style.color = "red";
-          console.error("Error!", error.message);
-        });
-    });
-  </script>
 </body>
 </html>
