@@ -1,181 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Abroadly</title>
-  <style>
-    /* General Reset */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background: #f8f9fa;
-      color: #222;
-    }
-
-    header {
-      background: linear-gradient(135deg, #3b82f6, #06b6d4);
-      color: white;
-      padding: 2rem;
-      text-align: center;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-    }
-
-    header p {
-      margin-top: 0.5rem;
-      font-size: 1.2rem;
-    }
-
-    /* Section Styling */
-    section {
-      padding: 4rem 2rem;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    section h2 {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 2rem;
-    }
-
-    /* Why Abroadly - 2x2 grid */
-    .features-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-    }
-
-    .feature {
-      background: white;
-      padding: 2rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-
-    .feature h3 {
-      margin-bottom: 0.5rem;
-      color: #3b82f6;
-    }
-
-    /* Example Images */
-    .examples {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
-    }
-
-    .examples img {
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    /* Waitlist Form */
-    .waitlist {
-      background: white;
-      padding: 3rem;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-
-    .waitlist input[type="email"] {
-      padding: 0.8rem;
-      width: 70%;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      margin-bottom: 1rem;
-    }
-
-    .waitlist button {
-      padding: 0.8rem 1.5rem;
-      background: #3b82f6;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 1rem;
-    }
-
-    .waitlist button:hover {
-      background: #2563eb;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      background: #222;
-      color: white;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-  <!-- Hero -->
-  <header>
-    <h1>Abroadly</h1>
-    <p>Connect · Explore · Remember</p>
+  <!-- HERO SECTION -->
+  <header class="hero">
+    <div class="overlay"></div>
+    <div class="hero-content">
+      <h1>Abroadly</h1>
+      <p>Connect. Explore. Remember.</p>
+      <a href="#waitlist" class="btn">Join the Waitlist</a>
+    </div>
   </header>
 
-  <!-- Why Abroadly -->
-  <section>
+  <!-- WHY ABROADLY SECTION -->
+  <section class="why">
     <h2>Why Abroadly?</h2>
-    <div class="features-grid">
-      <div class="feature">
-        <h3>Connect</h3>
-        <p>Meet fellow students in your city and program before you even arrive.</p>
+    <div class="grid">
+      <div class="card">
+        <h3>City Feeds</h3>
+        <p>See what’s happening in your study abroad city, semester by semester.</p>
       </div>
-      <div class="feature">
-        <h3>Explore</h3>
-        <p>Find peers with similar interests and discover bucket-list experiences together.</p>
+      <div class="card">
+        <h3>Bucket Lists</h3>
+        <p>Share your goals and discover peers with similar interests.</p>
       </div>
-      <div class="feature">
-        <h3>Share</h3>
-        <p>Post photos, videos, and tips in city-specific feeds that stay active all semester.</p>
+      <div class="card">
+        <h3>Community</h3>
+        <p>Find people before you go and connect instantly abroad.</p>
       </div>
-      <div class="feature">
-        <h3>Remember</h3>
-        <p>Save your adventures in a digital scrapbook you’ll always look back on.</p>
+      <div class="card">
+        <h3>Memories</h3>
+        <p>Document your abroad journey and look back on it forever.</p>
       </div>
     </div>
   </section>
 
-  <!-- Example Images -->
-  <section>
+  <!-- SEE ABROADLY SECTION -->
+  <section class="see">
     <h2>See Abroadly in Action</h2>
-    <div class="examples">
-      <img src="https://via.placeholder.com/400x250.png?text=City+Feed+Demo" alt="City Feed Demo">
-      <img src="https://via.placeholder.com/400x250.png?text=Bucket+List+Demo" alt="Bucket List Demo">
-      <img src="https://via.placeholder.com/400x250.png?text=Profile+Demo" alt="Profile Demo">
+    <div class="gallery">
+      <img src="https://source.unsplash.com/400x300/?travel,city" alt="Abroadly preview 1">
+      <img src="https://source.unsplash.com/400x300/?students,abroad" alt="Abroadly preview 2">
+      <img src="https://source.unsplash.com/400x300/?friends,travel" alt="Abroadly preview 3">
     </div>
   </section>
 
-  <!-- Waitlist -->
-  <section>
-    <div class="waitlist">
-      <h2>Join the Waitlist</h2>
-      <form action="YOUR_GOOGLE_SCRIPT_URL_HERE" method="POST">
-        <input type="email" name="email" placeholder="Enter your email" required>
-        <br>
-        <button type="submit">Sign Up</button>
-      </form>
-    </div>
+  <!-- WAITLIST SECTION -->
+  <section id="waitlist" class="waitlist">
+    <h2>Join the Waitlist</h2>
+    <form id="waitlistForm" method="POST" action="https://script.google.com/macros/s/AKfycbyUSpQqbXD7OJZKudZuwWuYGrtxjOE8EyYiLQfmCXU0xkvGjX9QIRWM88CvBl4qohIN/exec">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your University Email" required />
+      <button type="submit" class="btn">Sign Up</button>
+    </form>
+    <p id="formResponse"></p>
   </section>
 
+  <!-- FOOTER -->
   <footer>
-    <p>&copy; 2025 Abroadly. All rights reserved.</p>
+    <p>© 2025 Abroadly. All rights reserved.</p>
   </footer>
 
+  <script src="script.js"></script>
 </body>
 </html>
