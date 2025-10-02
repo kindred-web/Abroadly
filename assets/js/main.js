@@ -24,3 +24,4 @@ document.getElementById("waitlistForm").addEventListener("submit", async functio
     responseElement.style.color = "red";
   }
 });
+
