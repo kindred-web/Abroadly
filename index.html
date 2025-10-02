@@ -1,71 +1,154 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Abroadly</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Abroadly — Connect. Explore. Remember.</title>
+  <meta name="description" content="Abroadly — the social community for study abroad students. Connect with classmates, plan trips, and save memories." />
+  <!-- point to the CSS in the assets/css folder (case-sensitive) -->
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-  <!-- HERO SECTION -->
-  <header class="hero">
-    <div class="overlay"></div>
-    <div class="hero-content">
-      <h1>Abroadly</h1>
-      <p>Connect. Explore. Remember.</p>
-      <a href="#waitlist" class="btn">Join the Waitlist</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <svg class="logo-mark" viewBox="0 0 24 24" width="44" height="44" aria-hidden="true">
+          <rect width="24" height="24" rx="6" fill="#FF6B61"></rect>
+          <path d="M7 12c0-2.76 2.24-5 5-5v10c-2.76 0-5-2.24-5-5z" fill="#fff"/>
+        </svg>
+        <div class="brand-text">
+          <div class="brand-title">Abroadly</div>
+          <div class="brand-tag">Connect. Explore. Remember.</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#why">Why</a>
+        <a href="#see">See</a>
+        <a href="#waitlist" class="btn btn-outline">Join Waitlist</a>
+      </nav>
     </div>
   </header>
 
-  <!-- WHY ABROADLY SECTION -->
-  <section class="why">
-    <h2>Why Abroadly?</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>City Feeds</h3>
-        <p>See what’s happening in your study abroad city, semester by semester.</p>
+  <main>
+    <!-- HERO -->
+    <section id="home" class="hero">
+      <div class="hero-overlay"></div>
+      <div class="container hero-inner">
+        <div class="hero-left">
+          <h1>Connect. Explore. Remember.</h1>
+          <p class="lead">Studying abroad? Find people who want the same experiences as you — before you even land.</p>
+          <div class="hero-ctas">
+            <a href="#waitlist" class="btn btn-primary">Join the Waitlist</a>
+            <a href="#why" class="btn btn-ghost">How it works</a>
+          </div>
+
+          <ul class="hero-highlights">
+            <li><strong>Meet classmates & locals</strong> — city & semester cohorts.</li>
+            <li><strong>Plan trips together</strong> — easy bucket-list sharing & group planning.</li>
+            <li><strong>Save memories</strong> — scrapbook export later as a keepsake.</li>
+          </ul>
+        </div>
+
+        <div class="hero-right">
+          <div class="phone-mock">
+            <img src="https://source.unsplash.com/600x800/?students,travel" alt="Abroadly preview" />
+            <div class="phone-caption">
+              <strong>Barcelona • Fall 2025</strong>
+              <span>“Who wants to do a tapas crawl this weekend?”</span>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <h3>Bucket Lists</h3>
-        <p>Share your goals and discover peers with similar interests.</p>
+    </section>
+
+    <!-- WHY (2x2 grid) -->
+    <section id="why" class="why-section">
+      <div class="container">
+        <h2>Why Abroadly?</h2>
+        <p class="sub">A community built specifically for students studying overseas.</p>
+
+        <div class="grid-2x2">
+          <div class="feature-card">
+            <h3>City Feeds</h3>
+            <p>See what’s happening in your study abroad city, semester by semester.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Bucket Lists</h3>
+            <p>Share your goals and discover peers with similar interests.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Community</h3>
+            <p>Find people before you go and connect instantly abroad.</p>
+          </div>
+          <div class="feature-card">
+            <h3>Memories</h3>
+            <p>Document your abroad journey and look back on it forever.</p>
+          </div>
+        </div>
       </div>
-      <div class="card">
-        <h3>Community</h3>
-        <p>Find people before you go and connect instantly abroad.</p>
+    </section>
+
+    <!-- SEE Abroadly -->
+    <section id="see" class="see-section">
+      <div class="container">
+        <h2>See Abroadly in Action</h2>
+        <p class="sub">Quick examples of the city feed, bucket list, and profiles (demo images).</p>
+
+        <div class="gallery">
+          <img src="https://source.unsplash.com/420x300/?city,streets" alt="Abroadly preview 1">
+          <img src="https://source.unsplash.com/420x300/?students,group" alt="Abroadly preview 2">
+          <img src="https://source.unsplash.com/420x300/?travel,memories" alt="Abroadly preview 3">
+        </div>
       </div>
-      <div class="card">
-        <h3>Memories</h3>
-        <p>Document your abroad journey and look back on it forever.</p>
+    </section>
+
+    <!-- WAITLIST -->
+    <section id="waitlist" class="waitlist-section">
+      <div class="container waitlist-card">
+        <h2>Join the Waitlist</h2>
+        <p class="sub">Sign up with your university email to get early access in our demo city.</p>
+
+        <form id="waitlistForm" class="waitlist-form" method="POST" action="https://script.google.com/macros/s/AKfycbyUSpQqbXD7OJZKudZuwWuYGrtxjOE8EyYiLQfmCXU0xkvGjX9QIRWM88CvBl4qohIN/exec">
+          <div class="form-row">
+            <input name="name" type="text" placeholder="Your Name" required />
+            <input name="email" type="email" placeholder="Your University Email" required />
+          </div>
+          <div class="form-row">
+            <select name="city" aria-label="city">
+              <option value="Barcelona">Barcelona</option>
+              <option value="Florence">Florence</option>
+              <option value="London">London</option>
+              <option value="Other">Other</option>
+            </select>
+            <select name="role" aria-label="role">
+              <option>Pre-departure</option>
+              <option>Currently abroad</option>
+              <option>Returned alumni</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <input name="interests" type="text" placeholder="Interests (comma separated)"/>
+            <button type="submit" class="btn btn-primary">Sign Up</button>
+          </div>
+          <p id="formResponse" class="form-response" aria-live="polite"></p>
+        </form>
+
       </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div>© 2025 Abroadly — Connect. Explore. Remember.</div>
+      <div class="socials">Instagram · TikTok · Privacy</div>
     </div>
-  </section>
-
-  <!-- SEE ABROADLY SECTION -->
-  <section class="see">
-    <h2>See Abroadly in Action</h2>
-    <div class="gallery">
-      <img src="https://source.unsplash.com/400x300/?travel,city" alt="Abroadly preview 1">
-      <img src="https://source.unsplash.com/400x300/?students,abroad" alt="Abroadly preview 2">
-      <img src="https://source.unsplash.com/400x300/?friends,travel" alt="Abroadly preview 3">
-    </div>
-  </section>
-
-  <!-- WAITLIST SECTION -->
-  <section id="waitlist" class="waitlist">
-    <h2>Join the Waitlist</h2>
-    <form id="waitlistForm" method="POST" action="https://script.google.com/macros/s/AKfycbyUSpQqbXD7OJZKudZuwWuYGrtxjOE8EyYiLQfmCXU0xkvGjX9QIRWM88CvBl4qohIN/exec">
-      <input type="text" name="name" placeholder="Your Name" required />
-      <input type="email" name="email" placeholder="Your University Email" required />
-      <button type="submit" class="btn">Sign Up</button>
-    </form>
-    <p id="formResponse"></p>
-  </section>
-
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2025 Abroadly. All rights reserved.</p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- point to JS in assets/js folder -->
+  <script src="assets/js/script.js"></script>
 </body>
 </html>
