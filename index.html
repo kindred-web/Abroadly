@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Abroadly — Connect. Explore. Remember.</title>
   <meta name="description" content="Abroadly — the social community for study abroad students. Connect with classmates, plan trips, and save memories." />
-  <!-- point to the CSS in the assets/css folder (case-sensitive) -->
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -54,7 +53,8 @@
 
         <div class="hero-right">
           <div class="phone-mock">
-            <img src="https://source.unsplash.com/600x800/?students,travel" alt="Abroadly preview" />
+            <!-- Use stable external placeholders to ensure loading -->
+            <img src="https://via.placeholder.com/420x720.png?text=App+Preview" alt="Abroadly preview" onerror="this.src='https://via.placeholder.com/420x720?text=App+Preview'">
             <div class="phone-caption">
               <strong>Barcelona • Fall 2025</strong>
               <span>“Who wants to do a tapas crawl this weekend?”</span>
@@ -98,9 +98,20 @@
         <p class="sub">Quick examples of the city feed, bucket list, and profiles (demo images).</p>
 
         <div class="gallery">
-          <img src="https://source.unsplash.com/420x300/?city,streets" alt="Abroadly preview 1">
-          <img src="https://source.unsplash.com/420x300/?students,group" alt="Abroadly preview 2">
-          <img src="https://source.unsplash.com/420x300/?travel,memories" alt="Abroadly preview 3">
+          <figure class="gallery-card">
+            <img src="https://via.placeholder.com/420x300.png?text=City+Feed+Demo" alt="City Feed Demo" onerror="this.src='https://via.placeholder.com/420x300?text=Image+Unavailable'">
+            <figcaption>City feed — quick updates & meetups</figcaption>
+          </figure>
+
+          <figure class="gallery-card">
+            <img src="https://via.placeholder.com/420x300.png?text=Bucket+List+Demo" alt="Bucket List Demo" onerror="this.src='https://via.placeholder.com/420x300?text=Image+Unavailable'">
+            <figcaption>Bucket lists — find people who want the same trips</figcaption>
+          </figure>
+
+          <figure class="gallery-card">
+            <img src="https://via.placeholder.com/420x300.png?text=Profile+Demo" alt="Profile Demo" onerror="this.src='https://via.placeholder.com/420x300?text=Image+Unavailable'">
+            <figcaption>Profiles — program, city, interests</figcaption>
+          </figure>
         </div>
       </div>
     </section>
@@ -148,7 +159,6 @@
     </div>
   </footer>
 
-  <!-- point to JS in assets/js folder -->
   <script src="assets/js/script.js"></script>
 </body>
 </html>
