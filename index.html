@@ -4,11 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Abroadly — Connect. Explore. Remember.</title>
-  <meta name="description" content="Abroadly — the social community for study abroad students. Connect with classmates, plan trips, and save memories." />
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand">
@@ -21,11 +19,9 @@
           <div class="brand-tag">Connect. Explore. Remember.</div>
         </div>
       </div>
-
       <nav class="nav">
-        <a href="#home">Home</a>
-        <a href="#why">Why</a>
-        <a href="#see">See</a>
+        <a href="index.html">Home</a>
+        <a href="see.html">See</a>
         <a href="#waitlist" class="btn btn-outline">Join Waitlist</a>
       </nav>
     </div>
@@ -33,7 +29,7 @@
 
   <main>
     <!-- HERO -->
-    <section id="home" class="hero">
+    <section class="hero">
       <div class="hero-overlay"></div>
       <div class="container hero-inner">
         <div class="hero-left">
@@ -43,18 +39,15 @@
             <a href="#waitlist" class="btn btn-primary">Join the Waitlist</a>
             <a href="#why" class="btn btn-ghost">How it works</a>
           </div>
-
           <ul class="hero-highlights">
             <li><strong>Meet classmates & locals</strong> — city & semester cohorts.</li>
             <li><strong>Plan trips together</strong> — easy bucket-list sharing & group planning.</li>
             <li><strong>Save memories</strong> — scrapbook export later as a keepsake.</li>
           </ul>
         </div>
-
         <div class="hero-right">
           <div class="phone-mock">
-            <!-- Use stable external placeholders to ensure loading -->
-            <img src="https://via.placeholder.com/420x720.png?text=App+Preview" alt="Abroadly preview" onerror="this.src='https://via.placeholder.com/420x720?text=App+Preview'">
+            <img src="https://via.placeholder.com/420x720.png?text=App+Preview" alt="Abroadly preview">
             <div class="phone-caption">
               <strong>Barcelona • Fall 2025</strong>
               <span>“Who wants to do a tapas crawl this weekend?”</span>
@@ -69,7 +62,6 @@
       <div class="container">
         <h2>Why Abroadly?</h2>
         <p class="sub">A community built specifically for students studying overseas.</p>
-
         <div class="grid-2x2">
           <div class="feature-card">
             <h3>City Feeds</h3>
@@ -91,63 +83,35 @@
       </div>
     </section>
 
-    <!-- SEE Abroadly -->
-    <section id="see" class="see-section">
-      <div class="container">
-        <h2>See Abroadly in Action</h2>
-        <p class="sub">Quick examples of the city feed, bucket list, and profiles (demo images).</p>
-
-        <div class="gallery">
-          <figure class="gallery-card">
-            <img src="https://via.placeholder.com/420x300.png?text=City+Feed+Demo" alt="City Feed Demo" onerror="this.src='https://via.placeholder.com/420x300?text=Image+Unavailable'">
-            <figcaption>City feed — quick updates & meetups</figcaption>
-          </figure>
-
-          <figure class="gallery-card">
-            <img src="https://via.placeholder.com/420x300.png?text=Bucket+List+Demo" alt="Bucket List Demo" onerror="this.src='https://via.placeholder.com/420x300?text=Image+Unavailable'">
-            <figcaption>Bucket lists — find people who want the same trips</figcaption>
-          </figure>
-
-          <figure class="gallery-card">
-            <img src="https://via.placeholder.com/420x300.png?text=Profile+Demo" alt="Profile Demo" onerror="this.src='https://via.placeholder.com/420x300?text=Image+Unavailable'">
-            <figcaption>Profiles — program, city, interests</figcaption>
-          </figure>
-        </div>
-      </div>
-    </section>
-
     <!-- WAITLIST -->
     <section id="waitlist" class="waitlist-section">
       <div class="container waitlist-card">
         <h2>Join the Waitlist</h2>
         <p class="sub">Sign up with your university email to get early access in our demo city.</p>
-
-        <form id="waitlistForm" class="waitlist-form" method="POST" action="https://script.google.com/macros/s/AKfycbyUSpQqbXD7OJZKudZuwWuYGrtxjOE8EyYiLQfmCXU0xkvGjX9QIRWM88CvBl4qohIN/exec">
+        <form id="waitlistForm" class="waitlist-form" method="POST" action="YOUR_GOOGLE_SCRIPT_URL_HERE">
           <div class="form-row">
             <input name="name" type="text" placeholder="Your Name" required />
             <input name="email" type="email" placeholder="Your University Email" required />
           </div>
           <div class="form-row">
-            <select name="city" aria-label="city">
+            <select name="city">
               <option value="Barcelona">Barcelona</option>
               <option value="Florence">Florence</option>
               <option value="London">London</option>
               <option value="Other">Other</option>
             </select>
-            <select name="role" aria-label="role">
+            <select name="role">
               <option>Pre-departure</option>
               <option>Currently abroad</option>
               <option>Returned alumni</option>
             </select>
           </div>
-
           <div class="form-row">
-            <input name="interests" type="text" placeholder="Interests (comma separated)"/>
+            <input name="interests" type="text" placeholder="Interests (comma separated)" />
             <button type="submit" class="btn btn-primary">Sign Up</button>
           </div>
           <p id="formResponse" class="form-response" aria-live="polite"></p>
         </form>
-
       </div>
     </section>
   </main>
