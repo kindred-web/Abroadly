@@ -1,13 +1,13 @@
-// Waitlist form submission — posts to your Google Apps Script web app.
-// Shows a friendly inline message. No page reload.
 const form = document.getElementById('waitlistForm');
 const responseEl = document.getElementById('formResponse');
+const submitBtn = form ? form.querySelector('button[type="submit"]') : null;
 
 if (form) {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
     responseEl.textContent = 'Sending…';
     responseEl.style.color = '#666';
+    if (submitBtn) submitBtn.disabled = true;
 
     try {
       const formData = new FormData(form);
@@ -17,7 +17,6 @@ if (form) {
         body: formData,
       });
 
-      // Accept 2xx or status 0 (some deployments)
       if (res.ok || res.status === 0) {
         responseEl.textContent = '🎉 Thanks — you’re on the waitlist!';
         responseEl.style.color = 'green';
@@ -31,15 +30,20 @@ if (form) {
       console.error('Form submit error', err);
       responseEl.textContent = '❌ Unable to submit — check your connection.';
       responseEl.style.color = 'red';
+    } finally {
+      if (submitBtn) submitBtn.disabled = false;
     }
   });
 }
 
-// Image fallback handler — if an image fails to load, replace with placeholder
+// Image fallback
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('img').forEach(img => {
     img.addEventListener('error', () => {
-      img.src = 'https://via.placeholder.com/420x300.png?text=Image+Unavailable';
+      const isHero = img.closest('.hero') != null;
+      img.src = isHero
+        ? 'https://via.placeholder.com/1600x900.png?text=Hero+Image'
+        : 'https://via.placeholder.com/420x300.png?text=Image+Unavailable';
     });
   });
 });
