@@ -1,128 +1,57 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Abroadly — Connect. Explore. Remember.</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Abroadly — Study Abroad Simplified</title>
   <link rel="stylesheet" href="assets/css/style.css">
+  <script defer src="assets/js/script.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fafafa; }
+    header { text-align: center; padding: 2rem; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    h1 { color: #333; }
+    section { padding: 2rem; text-align: center; }
+    img { width: 100%; max-width: 600px; border-radius: 8px; margin: 1rem 0; }
+    form { display: inline-block; text-align: left; margin-top: 1rem; }
+    input, button { padding: 0.7rem; font-size: 1rem; border-radius: 6px; border: 1px solid #ccc; }
+    button { background: #007bff; color: white; border: none; cursor: pointer; }
+    button:hover { background: #0056b3; }
+    #formResponse { margin-top: 1rem; font-weight: bold; }
+    footer { text-align: center; padding: 1rem; background: #fff; margin-top: 2rem; font-size: 0.9rem; color: #666; }
+    a.button-link { display: inline-block; background: #007bff; color: white; padding: 0.8rem 1.5rem; border-radius: 8px; text-decoration: none; font-weight: bold; margin-top: 1rem; }
+    a.button-link:hover { background: #0056b3; }
+  </style>
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="brand">
-        <svg class="logo-mark" viewBox="0 0 24 24" width="44" height="44" aria-hidden="true">
-          <rect width="24" height="24" rx="6" fill="#FF6B61"></rect>
-          <path d="M7 12c0-2.76 2.24-5 5-5v10c-2.76 0-5-2.24-5-5z" fill="#fff"/>
-        </svg>
-        <div class="brand-text">
-          <div class="brand-title">Abroadly</div>
-          <div class="brand-tag">Connect. Explore. Remember.</div>
-        </div>
-      </div>
-      <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="see.html">See</a>
-        <a href="#waitlist" class="btn btn-outline">Join Waitlist</a>
-      </nav>
-    </div>
+  <header>
+    <h1>🌍 Welcome to Abroadly</h1>
+    <p>Discover, plan, and connect — your all-in-one study abroad companion.</p>
   </header>
 
-  <main>
-    <!-- HERO -->
-    <section class="hero">
-      <div class="hero-overlay"></div>
-      <div class="container hero-inner">
-        <div class="hero-left">
-          <h1>Connect. Explore. Remember.</h1>
-          <p class="lead">Studying abroad? Find people who want the same experiences as you — before you even land.</p>
-          <div class="hero-ctas">
-            <a href="#waitlist" class="btn btn-primary">Join the Waitlist</a>
-            <a href="#why" class="btn btn-ghost">How it works</a>
-          </div>
-          <ul class="hero-highlights">
-            <li><strong>Meet classmates & locals</strong> — city & semester cohorts.</li>
-            <li><strong>Plan trips together</strong> — easy bucket-list sharing & group planning.</li>
-            <li><strong>Save memories</strong> — scrapbook export later as a keepsake.</li>
-          </ul>
-        </div>
-        <div class="hero-right">
-          <div class="phone-mock">
-            <img src="https://via.placeholder.com/420x720.png?text=App+Preview" alt="Abroadly preview">
-            <div class="phone-caption">
-              <strong>Barcelona • Fall 2025</strong>
-              <span>“Who wants to do a tapas crawl this weekend?”</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+  <section id="hero">
+    <img src="hero.jpg" alt="Hero image showing study abroad adventure">
+    <h2>Join the Waitlist</h2>
+    <p>Be among the first to access our beta launch!</p>
+    <form id="waitlistForm" action="https://script.google.com/macros/s/AKfycbxYOUR-SCRIPT-ID-HERE/exec" method="POST">
+      <input type="email" name="email" placeholder="Enter your email" required>
+      <button type="submit">Join Waitlist</button>
+    </form>
+    <div id="formResponse"></div>
+  </section>
 
-    <!-- WHY (2x2 grid) -->
-    <section id="why" class="why-section">
-      <div class="container">
-        <h2>Why Abroadly?</h2>
-        <p class="sub">A community built specifically for students studying overseas.</p>
-        <div class="grid-2x2">
-          <div class="feature-card">
-            <h3>City Feeds</h3>
-            <p>See what’s happening in your study abroad city, semester by semester.</p>
-          </div>
-          <div class="feature-card">
-            <h3>Bucket Lists</h3>
-            <p>Share your goals and discover peers with similar interests.</p>
-          </div>
-          <div class="feature-card">
-            <h3>Community</h3>
-            <p>Find people before you go and connect instantly abroad.</p>
-          </div>
-          <div class="feature-card">
-            <h3>Memories</h3>
-            <p>Document your abroad journey and look back on it forever.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+  <section id="features">
+    <h2>What Abroadly Offers</h2>
+    <img src="city-feed.jpg" alt="Abroadly city feed">
+    <p>Explore authentic stories from students abroad through our global city feed.</p>
+    <img src="bucket-list.jpg" alt="Abroadly bucket list">
+    <p>Build and track your personal bucket list for your time overseas.</p>
+    <img src="profile-demo.jpg" alt="Abroadly profile demo">
+    <p>Connect with peers, share experiences, and find your next adventure.</p>
+    <a href="see.html" class="button-link">See More</a>
+  </section>
 
-    <!-- WAITLIST -->
-    <section id="waitlist" class="waitlist-section">
-      <div class="container waitlist-card">
-        <h2>Join the Waitlist</h2>
-        <p class="sub">Sign up with your university email to get early access in our demo city.</p>
-        <form id="waitlistForm" class="waitlist-form" method="POST" action="YOUR_GOOGLE_SCRIPT_URL_HERE">
-          <div class="form-row">
-            <input name="name" type="text" placeholder="Your Name" required />
-            <input name="email" type="email" placeholder="Your University Email" required />
-          </div>
-          <div class="form-row">
-            <select name="city">
-              <option value="Barcelona">Barcelona</option>
-              <option value="Florence">Florence</option>
-              <option value="London">London</option>
-              <option value="Other">Other</option>
-            </select>
-            <select name="role">
-              <option>Pre-departure</option>
-              <option>Currently abroad</option>
-              <option>Returned alumni</option>
-            </select>
-          </div>
-          <div class="form-row">
-            <input name="interests" type="text" placeholder="Interests (comma separated)" />
-            <button type="submit" class="btn btn-primary">Sign Up</button>
-          </div>
-          <p id="formResponse" class="form-response" aria-live="polite"></p>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div>© 2025 Abroadly — Connect. Explore. Remember.</div>
-      <div class="socials">Instagram · TikTok · Privacy</div>
-    </div>
+  <footer>
+    <p>© 2025 Abroadly | </p>
   </footer>
-
-  <script src="assets/js/script.js"></script>
 </body>
 </html>
